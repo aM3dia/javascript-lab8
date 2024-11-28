@@ -46,3 +46,14 @@ document.getElementById("extract").addEventListener("click", function () {
 const {name, courses} = student;
 console.log("Name:", student.name);
 console.log("Courses:", student.courses);
+
+//destructuring array of scores
+const scores = [85, 92, 78, 90];
+
+//display array of scores in index.html
+document.getElementById("scores").innerHTML = `<strong>Scores:</strong> ${scores.join(", ")}`;
+
+//log the first two scores from an array of scores to console
+const [firstScore, secondScore] = scores;
+console.log("First score:", firstScore);
+console.log("Second score:", secondScore);
