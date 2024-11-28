@@ -3,7 +3,7 @@ const student = {
     name: "Anupa Ragoonanan",
     age: 22,
     enrolled: true,
-    courses: ["Algorithms", "Databases", "Web Design", "JavaScript", "Operating Systems"],
+    courses: ["Algorithms & Problem Solving", "Database Concepts and Design", "Web Programming & Design", "JavaScript", "Operating Systems"],
     displayInfo: function () {
         return `
             <strong>Student Name:</strong> ${student.name} <br>
@@ -57,3 +57,7 @@ document.getElementById("scores").innerHTML = `<strong>Scores:</strong> ${scores
 const [firstScore, secondScore] = scores;
 console.log("First score:", firstScore);
 console.log("Second score:", secondScore);
+
+//Task 4: Spread Operator
+const cloneStudents = {...student, graduationYear: 2026};
+console.log("Updated Student Information:", cloneStudents);
