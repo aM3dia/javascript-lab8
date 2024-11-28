@@ -86,3 +86,13 @@ student.totalCourses = function () {
 console.log("Total Courses:", student.totalCourses());
 
 document.getElementById("arrayCount").innerHTML = `<strong>Total Courses:</strong> ${student.totalCourses()}`;
+
+//Bonus
+const totalScore = scores.reduce(function(sum, score) {
+    return sum + score;
+}); 
+
+const avgScore = totalScore / scores.length;
+console.log("Average Score:", avgScore);
+
+document.getElementById("averageScore").innerHTML = `<strong>Average Score:</strong> ${avgScore}`
