@@ -3,7 +3,7 @@ const student = {
     name: "Anupa Ragoonanan",
     age: 22,
     enrolled: true,
-    courses: ["Algorithms & Problem Solving", "Database Concepts and Design", "Operating Systems"],
+    courses: ["Algorithms and Problem Solving", "Database Concepts and Design", "Operating Systems"],
     displayInfo: function () {
         return `
             <strong>Student Name:</strong> ${student.name} <br>
@@ -63,6 +63,26 @@ const cloneStudents = {...student, graduationYear: 2026};
 console.log("Updated Student Information:", cloneStudents);
 
 //combine student.courses with a new array of courses
-const addCourses = ["Web Programming & Design", "JavaScript"];
+const addCourses = ["Web Programming and Design", "JavaScript"];
 const mergeCourses = [...student.courses, ...addCourses];
 console.log("Merged Courses:", mergeCourses);
+
+//Task 5: Object Methods
+//dynamically add a course
+student.addCourse = function (newCourse) {
+    student.courses.push(newCourse);
+};
+
+student.addCourse("Work");
+console.log("Updated Courses:", student.courses);
+
+document.getElementById("dynamicArray").innerHTML = `<strong>Updated Courses:</strong> ${student.courses.join(", ")}`;
+
+//calculate the number of courses in the new array
+student.totalCourses = function () {
+    return student.courses.length;
+};
+
+console.log("Total Courses:", student.totalCourses());
+
+document.getElementById("arrayCount").innerHTML = `<strong>Total Courses:</strong> ${student.totalCourses()}`;
