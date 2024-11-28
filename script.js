@@ -3,7 +3,7 @@ const student = {
     name: "Anupa Ragoonanan",
     age: 22,
     enrolled: true,
-    courses: ["Algorithms & Problem Solving", "Database Concepts and Design", "Web Programming & Design", "JavaScript", "Operating Systems"],
+    courses: ["Algorithms & Problem Solving", "Database Concepts and Design", "Operating Systems"],
     displayInfo: function () {
         return `
             <strong>Student Name:</strong> ${student.name} <br>
@@ -61,3 +61,8 @@ console.log("Second score:", secondScore);
 //Task 4: Spread Operator
 const cloneStudents = {...student, graduationYear: 2026};
 console.log("Updated Student Information:", cloneStudents);
+
+//combine student.courses with a new array of courses
+const addCourses = ["Web Programming & Design", "JavaScript"];
+const mergeCourses = [...student.courses, ...addCourses];
+console.log("Merged Courses:", mergeCourses);
